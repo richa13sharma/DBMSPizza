@@ -10,28 +10,28 @@
     else
         echo "Connection successful \n";
     
-    // $sql = "CREATE DATABASE speedzadb";  
+    $sql = "CREATE DATABASE speedzadb";  
     
-    // $return = pg_query($db, $sql);
-    // if(!$return)
-    //     // echo pg_last_error($db);
-    //     echo "\n";
-    // else
-    //     echo "Database created successfully.\n";
+    $return = pg_query($db, $sql);
+    if(!$return)
+        // echo pg_last_error($db);
+        echo "\n";
+    else
+        echo "Database created successfully.\n";
     
-    // $tablePizza = "CREATE TABLE TypesOfPizza(
-    //         id SERIAL PRIMARY KEY,
-    //         nameOfPizza VARCHAR(20) NOT NULL,
-    //         cost REAL NOT NULL,
-    //         ingredients VARCHAR(100) NOT NULL,
-    //         vegetarian BOOLEAN NOT NULL)
-    //     ";
+    $tablePizza = "CREATE TABLE TypesOfPizza(
+            id SERIAL PRIMARY KEY,
+            nameOfPizza VARCHAR(20) NOT NULL,
+            cost REAL NOT NULL,
+            ingredients VARCHAR(100) NOT NULL,
+            vegetarian BOOLEAN NOT NULL)
+        ";
     
-    // $ret = pg_query($db, $tablePizza);
-    // if (!$ret)
-    //     echo pg_last_error($db)."\n";
-    // else
-    //     echo "table created successfully.\n";
+    $ret = pg_query($db, $tablePizza);
+    if (!$ret)
+        echo pg_last_error($db)."\n";
+    else
+        echo "table created successfully.\n";
 
     $sql = "INSERT INTO typesofpizza (id, nameofpizza, cost, ingredients, vegetarian)
             VALUES (1001, 'Pepperoni', '550', 'salami, pork, beef, paprika', 'False'),
