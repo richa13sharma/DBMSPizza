@@ -33,5 +33,19 @@ else
 
     // $prodInsert = pg_query($db, $prod);
 
+    $custo = "INSERT INTO Customer (customername, customeremail, customerphone, customerpassword)
+            VALUES ('Arush', 'arush123@gmail.com', 9945894355, md5('thisispasssword')),
+                    ('Balaji', 'balajirox@gmail.com', 9845012345, md5('thisisnotpassword')),
+                    ('Chitra', 'chitraraj@gmail.com', 9740234589, md5('ab123'))";
+
+    // $custoInsert = pg_query($db, $custo);
+
+    $alter = "ALTER TABLE Customer ALTER COLUMN customerpassword TYPE VARCHAR(40)";
+    // $alterIn = pg_query($db, $alter);
+
+    $orderins = "INSERT INTO Orders (customerid, subtotal, itemcount) 
+            VALUES (1, 344, 3),
+                   (2, 433, 3)";
+    $order = pg_query($db, $orderins);
 
 ?>
