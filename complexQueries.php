@@ -22,9 +22,9 @@
     $queryInnerJoin = "SELECT Orders.orderid, customer.customername
         FROM Orders
         INNER JOIN Customer ON Orders.customerid = customer.customerid";
-    // $result = pg_query($db, $queryInnerJoin);
-    // $arr = pg_fetch_all($result);
-    // print_r($arr);
+    $result = pg_query($db, $queryInnerJoin);
+    $arr = pg_fetch_all($result);
+    print_r($arr);
 
     $queryEquiJoin = "SELECT * FROM customer NATURAL JOIN orders";
     // $result = pg_query($db, $queryEquiJoin);
@@ -40,6 +40,11 @@
     // $result = pg_query($db, $orderbyquery);
     // $arr = pg_fetch_all($result);
     // print_r($arr);
+    
+    // Group by having
+    // Nested queries, corelated
+    // IN, EXISTS, EXCEPT
+    // outer join
     
     
 ?> 
