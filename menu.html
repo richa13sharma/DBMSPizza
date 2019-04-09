@@ -1,0 +1,198 @@
+<!-- <html>
+    <head>
+        <title>
+            Menu
+        </title>
+        <link rel="stylesheet" href = "menu.css">
+    </head>
+    <body>
+        <nav id="mainNavbBar">
+            <img src = "pizza.jpg">
+            <ul>
+                <li class="website"><a href = "homepage.html">Pizza website</a></li>
+                <li id ="menu"><a href="menu.html">Menu</a></li>
+                <li id = "sign"><a href="signup.html">Sign In</a></li>
+                <li id = "cart"><a href="cart.html">Cart</a></li>
+            </ul> 
+        </nav>
+        <br>
+        <p>
+            Pizzas
+        </p>
+        <div>
+            <div>
+                Pizza1 
+                <br>
+                <a href = "cart.html">Add to cart</a>
+            </div>
+            <div>
+                Pizza2
+                <br>
+                <a href = "cart.html">Add to cart</a>
+            </div>
+            
+            <div>
+                Pizza3 
+                <br>
+                <a href = "cart.html">Add to cart</a>
+            </div>
+            
+            <div>
+                Pizza4 
+                <br>
+                <a href = "cart.html">Add to cart</a>
+            </div>
+            <div>
+                Pizza5 
+                <br>
+                <a href = "cart.html">Add to cart</a>
+            </div>
+            <div>
+                Pizza6 
+                <br>
+                <a href = "cart.html">Add to cart</a>
+            </div>
+            <div>
+                Pizza7 
+                <br>
+                <a href = "cart.html">Add to cart</a>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <p>
+            Sides
+        </p>
+        <div>
+            <div>
+                Side1 
+                <br>
+                <a href = "cart.html">Add to cart</a>
+            </div>
+            <div>
+                Side2
+                <br>
+                <a href = "cart.html">Add to cart</a>
+            </div>
+            
+            <div>
+                Side3 
+                <br>
+                <a href = "cart.html">Add to cart</a>
+            </div>
+            
+            <div>
+                Side4 
+                <br>
+                <a href = "cart.html">Add to cart</a>
+            </div>
+            <div>
+                Side5 
+                <br>
+                <a href = "cart.html">Add to cart</a>
+            </div>
+            <div>
+                Side6 
+                <br>
+                <a href = "cart.html">Add to cart</a>
+            </div>
+            <div>
+                Side7 
+                <br>
+                <a href = "cart.html">Add to cart</a>
+            </div>
+        </div>
+    </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Menu</title>
+                
+<link rel="icon" type="image/x-icon" href="pizzacopy.ico">       
+ </head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="All.css">
+<script src = "addtocart.js"></script>
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;background-color: black}
+h1,h2,h3,h4,h5,h6 {
+	font-family: "Playfair Display";
+	color:rgb(236, 179, 152);
+	
+    letter-spacing: 5px;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="homepage.html" class="w3-bar-item"><img src="pizza.jpg" width="20px" height="20px"></a>
+    
+    <a href="homepage.html" class="w3-bar-item w3-button">Pizza booking site</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="menu.html" class="w3-bar-item w3-button">Menu</a>
+	  <a href="signup.php" class="w3-bar-item w3-button" onclick="sessionStorage.clear()">Logout</a>
+      <a href="cart.html" class="w3-bar-item w3-button">Cart</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <hr>
+  
+  <!-- Menu Section -->
+  <div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center"><a href="menu.html" class="w3-bar-item w3-button">Menu</a></h1><br>
+      <h4>Cheese</h4>
+      <p class="w3-text-light-grey">Premium mozarella cheese - $12<br>
+        <button class="w3-button" id = "Cheese" onclick = "add(this.id)">Add to cart</button></p><br>
+    
+      <h4>Garlic Tomato</h4>
+      <p class="w3-text-light-grey">hand-chopped tomatoes with roast garlic - $15<br>
+        <button class="w3-button" id = "Gtom" onclick = "add(this.id)">Add to cart</button></p><br>
+    
+      <h4>Pepperoni</h4>
+      <p class="w3-text-light-grey">Succulent Pepperoni topped with cheese - $17<br>
+        <button class="w3-button" id = "Pep" onclick = "add(this.id)">Add to cart</button></p><br>
+    
+      <h4>BBQ Chicken</h4>
+      <p class="w3-text-light-grey">Premium mozarella cheese barbecued with sweet chicken - $20<br>
+        <button class="w3-button" id = "BBQ" onclick="add(this.id)">Add to cart</button></p><br>  
+    <h4>Mt. Olympus</h4>
+      <p class="w3-text-light-grey">Sliced mushrooms,sweet onions and more - $20<br>
+        <button class="w3-button" id = "Olympus" onclick="add(this.id)">Add to cart</button></p><br>  
+    <h4>Mt. Nebo</h4>
+    <p class="w3-text-light-grey">Brocolli and red onion wonder - $20<br>
+      <button class="w3-button" id = "Nebo" onclick="add(this.id)">Add to cart</button></p><br>  
+  <h4>Mt. Everest</h4>
+  <p class="w3-text-light-grey">Marinara sauce and goat cheese filled succulent heaven - $22<br>
+    <button class="w3-button" id = "Everest" onclick="add(this.id)">Add to cart</button></p><br>  
+    <h4>Mt. Fuji</h4>
+<p class="w3-text-light-grey">Tomato and bell peppers make this the best pizza to have - $25<br>
+  <button class="w3-button" id = "Fuji" onclick="add(this.id)">Add to cart</button></p><br>  
+</div> 
+    <div class="w3-col l6 w3-padding-large">
+      <img src="pmenu.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="align-items: center; height: 800px; width: 1000px">
+    </div>
+  </div>
+
+  <hr>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-32">
+ Only weirddoughs don't love pizza.
+</footer>
+
+</body>
+</html>

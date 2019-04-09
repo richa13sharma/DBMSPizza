@@ -15,6 +15,7 @@
         <link href="plugin-frameworks/swiper.css" rel="stylesheet">
         <link href="fonts/ionicons.css" rel="stylesheet">
         <link href="common/styles.css" rel="stylesheet">
+        <script src = "addtocart.js"></script>
 
 </head>
 <body>
@@ -23,9 +24,9 @@
         <div class="container">
                 <a class="logo" href="#"><img src="images/logo-white.png" alt="Logo"></a>
 
-                <div class="right-area">
+                <!-- <div class="right-area">
                         <h6><a class="plr-20 color-white btn-fill-primary" href="tel: +91 80 4953 7324">ORDER: +91 80 4953 7324</a></h6>
-                </div><!-- right-area -->
+                </div>right-area -->
 
                 <a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>
 
@@ -108,9 +109,10 @@
                                                 <h6 class="ribbon-cont"><div class="ribbon primary"></div><b>OFFER</b></h6>
                                                 <img src="images/seller-2-200x200.png" alt="">
                                         </div>
-                                        <h5 class="mt-20">Pizza Margherita</h5>
-                                        <h4 class="mt-5"><b>$11.90</b></h4>
-                                        <h6 class="mt-20"><a href="#" class="btn-brdr-primary plr-25"><b>Order Now</b></a></h6>
+                                        <h5 class="mt-20">Mexican Wave</h5>
+                                        <h4 class="mt-5"><b>Rs. 499</b></h4>
+                                
+                                        <h6 class="mt-20"><a onclick="add(1)" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                 </div><!--text-center-->
                         </div><!-- col-md-3 -->
 
@@ -118,17 +120,19 @@
                                 <div class="center-text mb-30">
                                         <div class="ïmg-200x mlr-auto pos-relative"><img src="images/seller-2-200x200.png" alt=""></div>
                                         <h5 class="mt-20">Pizza Margherita</h5>
-                                        <h4 class="mt-5"><b>$11.90</b></h4>
-                                        <h6 class="mt-20"><a href="#" class="btn-brdr-primary plr-25"><b>Order Now</b></a></h6>
+                                        <h4 class="mt-5"><b>Rs. 399</b></h4>
+                                
+                                        <h6 class="mt-20"><a onclick="add(2)" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                 </div><!--text-center-->
                         </div><!-- col-md-3 -->
 
                         <div class="col-lg-3 col-md-4  col-sm-6 ">
                                 <div class="center-text mb-30">
                                         <div class="ïmg-200x mlr-auto pos-relative"><img src="images/seller-2-200x200.png" alt=""></div>
-                                        <h5 class="mt-20">Pizza Margherita</h5>
-                                        <h4 class="mt-5"><b>$11.90</b></h4>
-                                        <h6 class="mt-20"><a href="#" class="btn-brdr-primary plr-25"><b>Order Now</b></a></h6>
+                                        <h5 class="mt-20">Onion & Cheese</h5>
+                                        <h4 class="mt-5"><b>Rs. 299</b></h4>
+                                
+                                        <h6 class="mt-20"><a onclick="add(3)" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                 </div><!--text-center-->
                         </div><!-- col-md-3 -->
 
@@ -138,9 +142,10 @@
                                                 <h6  class="ribbon-cont"><div class="ribbon secondary"></div><b>SPECIALITY</b></h6>
                                                 <img src="images/seller-2-200x200.png" alt="">
                                         </div>
-                                        <h5 class="mt-20">Pizza Margherita</h5>
-                                        <h4 class="mt-5"><b>$11.90</b></h4>
-                                        <h6 class="mt-20"><a href="#" class="btn-brdr-primary plr-25"><b>Order Now</b></a></h6>
+                                        <h5 class="mt-20">Non-Veg Supreme</h5>
+                                        <h4 class="mt-5"><b>Rs. 835</b></h4>
+                                
+                                        <h6 class="mt-20"><a onclick="add(4)" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                 </div><!--text-center-->
                         </div><!-- col-md-3 -->
 
@@ -149,7 +154,8 @@
                                         <div class="ïmg-200x mlr-auto pos-relative"><img src="images/seller-2-200x200.png" alt=""></div>
                                         <h5 class="mt-20">Pizza Margherita</h5>
                                         <h4 class="mt-5"><b>$11.90</b></h4>
-                                        <h6 class="mt-20"><a href="#" class="btn-brdr-primary plr-25"><b>Order Now</b></a></h6>
+                                
+                                        <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                 </div><!--text-center-->
                         </div><!-- col-md-3 -->
 
@@ -161,7 +167,8 @@
                                         </div>
                                         <h5 class="mt-20">Pizza Margherita</h5>
                                         <h4 class="mt-5"><b>$11.90</b></h4>
-                                        <h6 class="mt-20"><a href="#" class="btn-brdr-primary plr-25"><b>Order Now</b></a></h6>
+                                
+                                        <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                 </div><!--text-center-->
                         </div><!-- col-md-3 -->
 
@@ -173,7 +180,8 @@
                                         </div>
                                         <h5 class="mt-20">Pizza Margherita</h5>
                                         <h4 class="mt-5"><b>$11.90</b></h4>
-                                        <h6 class="mt-20"><a href="#" class="btn-brdr-primary plr-25"><b>Order Now</b></a></h6>
+                                
+                                        <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                 </div><!--text-center-->
                         </div><!-- col-md-3 -->
 
@@ -182,7 +190,8 @@
                                         <div class="ïmg-200x mlr-auto pos-relative"><img src="images/seller-2-200x200.png" alt=""></div>
                                         <h5 class="mt-20">Pizza Margherita</h5>
                                         <h4 class="mt-5"><b>$11.90</b></h4>
-                                        <h6 class="mt-20"><a href="#" class="btn-brdr-primary plr-25"><b>Order Now</b></a></h6>
+                                
+                                        <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                 </div><!--text-center-->
                         </div><!-- col-md-3 -->
                 </div><!-- row -->
@@ -217,8 +226,10 @@
                                         <div class="s-left"><img class="br-3" src="images/menu-1-120x120.jpg" alt="Menu Image"></div><!--s-left-->
                                         <div class="s-right">
                                                 <h5 class="mb-10"><b>Pizza Margherita</b><b class="color-primary float-right">$12.00</b></h5>
-                                                <p class="pr-70">Maecenas fermentum tortor id fringilla molestie. In hac habitasse platea dictumst. </p>
-                                                <h6 class="mt-20"><a href="#" class="btn-brdr-primary plr-25"><b>Order Now</b></a></h6>
+                                                <p class="pr-70">
+                                                        Maecenas fermentum tortor id fringilla molestie. In hac habitasse platea dictumst. </p>
+                                        
+                                                <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                         </div><!--s-right-->
                                 </div><!-- sided-90x -->
                         </div><!-- food-menu -->
@@ -229,7 +240,8 @@
                                         <div class="s-right">
                                                 <h5 class="mb-10"><b>Italian pasta</b><b class="color-primary float-right">$20.00</b></h5>
                                                 <p class="pr-70">Proin dictum viverra varius. Etiam vulputate libero dui, at pretium elit elementum quis. </p>
-                                                <h6 class="mt-20"><a href="#" class="btn-brdr-primary plr-25"><b>Order Now</b></a></h6>
+                                        
+                                                <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                         </div><!--s-right-->
                                 </div><!-- sided-90x -->
                         </div><!-- food-menu -->
@@ -240,7 +252,8 @@
                                         <div class="s-right">
                                                 <h5 class="mb-10"><b>Pizza Prosciuto</b><b class="color-primary float-right">$12.00</b></h5>
                                                 <p class="pr-70">Maecenas fermentum tortor id fringilla molestie. In hac habitasse platea dictumst. </p>
-                                                <h6 class="mt-20"><a href="#" class="btn-brdr-primary plr-25"><b>Order Now</b></a></h6>
+                                        
+                                                <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                         </div><!--s-right-->
                                 </div><!-- sided-90x -->
                         </div><!-- food-menu -->
@@ -251,7 +264,8 @@
                                         <div class="s-right">
                                                 <h5 class="mb-10"><b>Broschettas</b><b class="color-primary float-right">$6.00</b></h5>
                                                 <p class="pr-70">Proin dictum viverra varius. Etiam vulputate libero dui, at pretium elit elementum quis. </p>
-                                                <h6 class="mt-20"><a href="#" class="btn-brdr-primary plr-25"><b>Order Now</b></a></h6>
+                                        
+                                                <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                         </div><!--s-right-->
                                 </div><!-- sided-90x -->
                         </div><!-- food-menu -->
@@ -261,7 +275,8 @@
                                         <div class="s-right">
                                                 <h5 class="mb-10"><b>Pizza Margherita</b><b class="color-primary float-right">$12.00</b></h5>
                                                 <p class="pr-70">Maecenas fermentum tortor id fringilla molestie. In hac habitasse platea dictumst. </p>
-                                                <h6 class="mt-20"><a href="#" class="btn-brdr-primary plr-25"><b>Order Now</b></a></h6>
+                                        
+                                                <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                         </div><!--s-right-->
                                 </div><!-- sided-90x -->
                         </div><!-- food-menu -->
@@ -272,7 +287,8 @@
                                         <div class="s-right">
                                                 <h5 class="mb-10"><b>Italian pasta</b><b class="color-primary float-right">$20.00</b></h5>
                                                 <p class="pr-70">Proin dictum viverra varius. Etiam vulputate libero dui, at pretium elit elementum quis. </p>
-                                                <h6 class="mt-20"><a href="#" class="btn-brdr-primary plr-25"><b>Order Now</b></a></h6>
+                                        
+                                                <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                         </div><!--s-right-->
                                 </div><!-- sided-90x -->
                         </div><!-- food-menu -->
@@ -283,7 +299,8 @@
                                         <div class="s-right">
                                                 <h5 class="mb-10"><b>Pizza Prosciuto</b><b class="color-primary float-right">$12.00</b></h5>
                                                 <p class="pr-70">Maecenas fermentum tortor id fringilla  molestie. In hac habitasse platea dictumst. </p>
-                                                <h6 class="mt-20"><a href="#" class="btn-brdr-primary plr-25"><b>Order Now</b></a></h6>
+                                        
+                                                <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                         </div><!--s-right-->
                                 </div><!-- sided-90x -->
                         </div><!-- food-menu -->
@@ -294,7 +311,8 @@
                                         <div class="s-right">
                                                 <h5 class="mb-10"><b>Broschettas</b><b class="color-primary float-right">$6.00</b></h5>
                                                 <p class="pr-70">Proin dictum viverra varius. Etiam vulputate libero dui, at pretium elit elementum quis. </p>
-                                                <h6 class="mt-20"><a href="#" class="btn-brdr-primary plr-25"><b>Order Now</b></a></h6>
+                                        
+                                                <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                         </div><!--s-right-->
                                 </div><!-- sided-90x -->
                         </div><!-- food-menu -->
