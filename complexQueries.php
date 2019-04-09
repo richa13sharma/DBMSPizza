@@ -41,10 +41,18 @@
     // $arr = pg_fetch_all($result);
     // print_r($arr);
     
-    // Group by having
-    // Nested queries, corelated
-    // IN, EXISTS, EXCEPT
-    // outer join
+    
+
+    $groupbyquery = "SELECT * FROM Product GROUP BY productvegetarian HAVING productprice < 399";
+    //Groups pizzas by veg/non-veg for pizzas above the price of 399
+    // $result = pg_query($db, $orderbyquery);
+    // $arr = pg_fetch_all($result);
+    // print_r($arr);
+
+    $nestedquery = "SELECT customername FROM (SELECT * FROM customer WHERE customeremail "%gmail.com")";
+    //Selects customers who's email ends with gmail.com
+    $correlatedquery = "SELECT productdescription FROM product WHERE productprice > (SELECT AVG(productprice) FROM product)";
+    //selects product descriptions of products whose price is above the average price of all the products
     
     
 ?> 
