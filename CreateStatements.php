@@ -56,13 +56,17 @@
         productId SERIAL REFERENCES Product(productId),
         orderId SERIAL REFERENCES Orders(orderId)
     )";
+    $tableCart = "CREATE TABLE Cart (
+        productId SERIAL REFERENCES product(productid),
+        productQty INT
+    )";
 
-    // $tableShoppingCart = "CREATE TABLE Cart (
-    //     cartId SERIAL PRIMARY KEY,
-    //     productId SERIAL   REFERENCES Product(productId),
-    //     orderDetailsId SERIAL   REFERENCES OrderDetails(orderDetailsId),
+    $tableShoppingCart = "CREATE TABLE Cart (
+        cartId SERIAL PRIMARY KEY,
+        productId SERIAL   REFERENCES Product(productId),
+        orderDetailsId SERIAL   REFERENCES OrderDetails(orderDetailsId),
         
-    // )";
+    )";
     $tablecatquery = pg_query($db, $tableCategory);
     if(!$tablecatquery)
         echo ("error\n");
@@ -98,3 +102,9 @@
         echo ("error\n");
     else
         echo ("success tableorderdets\n");
+
+    $tablecartsquery = pg_query($db, $tableCart);
+    if(!$tablecartsquery)
+        echo ("error\n");
+    else
+        echo ("success tablecart\n");
