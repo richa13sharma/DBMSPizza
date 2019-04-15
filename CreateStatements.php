@@ -56,16 +56,16 @@
         productId SERIAL REFERENCES Product(productId),
         orderId SERIAL REFERENCES Orders(orderId)
     )";
-    $tableCart = "CREATE TABLE Cart (
-        productId SERIAL REFERENCES product(productid),
-        productQty INT
-    )";
+    // $tableCart = "CREATE TABLE Cart (
+    //     productId SERIAL REFERENCES product(productid),
+    //     productQty INT
+    // )";
 
     $tableShoppingCart = "CREATE TABLE Cart (
         cartId SERIAL PRIMARY KEY,
         productId SERIAL   REFERENCES Product(productId),
-        orderDetailsId SERIAL   REFERENCES OrderDetails(orderDetailsId),
-        
+        orderId SERIAL REFERENCES Order(orderId),
+        qty INT NOT NULL
     )";
     $tablecatquery = pg_query($db, $tableCategory);
     if(!$tablecatquery)
