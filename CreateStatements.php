@@ -2,7 +2,7 @@
     $host = "host = localhost";
     $port = "port = 5432";
     $dbname = "dbname = speedzadb";
-    $credentials = "user = postgres password=gvonly";
+    $credentials = "user = postgres password=enteryourpass";
 
     $db = pg_connect("$host $port $dbname $credentials");
     if (!$db)
@@ -62,9 +62,8 @@
     // )";
 
     $tableShoppingCart = "CREATE TABLE Cart (
-        cartId SERIAL PRIMARY KEY,
+        customerId SERIAL REFERENCES Customer(customerId),
         productId SERIAL   REFERENCES Product(productId),
-        orderId SERIAL REFERENCES Order(orderId),
         qty INT NOT NULL
     )";
     $tablecatquery = pg_query($db, $tableCategory);
@@ -103,7 +102,7 @@
     else
         echo ("success tableorderdets\n");
 
-    $tablecartsquery = pg_query($db, $tableCart);
+    $tablecartsquery = pg_query($db, $tableShoppingCart);
     if(!$tablecartsquery)
         echo ("error\n");
     else
