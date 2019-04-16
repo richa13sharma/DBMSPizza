@@ -984,7 +984,7 @@ section {
 
 /* BUTTON STYLING */
 
-.btn-brdr-primary { text-align: center; height: 50px; line-height: 60px; border: 1px solid #000; color: #000; border-radius: 2px; }
+.btn-brdr-primary { text-align: center; height: 50px; line-height: 60px; border: 1px solid rgb(252, 0, 0); color: #EF0031; border-radius: 2px; }
 
 .btn-brdr-primary:hover { background: #EF0031; color: #FFFFFF; }
 

@@ -143,7 +143,7 @@
                                         <h5 class="mt-20">Mexican Wave</h5>
                                         <h4 class="mt-5"><b>Rs. 499</b></h4>
                                 
-                                        <h6 class="mt-20"><a href="http://localhost/DBMSPizza/indexcopy.php?pid=1" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
+                                        <h6 class="mt-20"><button href="http://localhost/DBMSPizza/indexcopy.php?pid=1" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                 </div><!--text-center-->
                         </div><!-- col-md-3 -->
 
@@ -153,7 +153,7 @@
                                         <h5 class="mt-20">Pizza Margherita</h5>
                                         <h4 class="mt-5"><b>Rs. 399</b></h4>
                                 
-                                        <h6 class="mt-20"><a href="http://localhost/DBMSPizza/indexcopy.php?pid=2" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
+                                        <h6 class="mt-20"><button href="http://localhost/DBMSPizza/indexcopy.php?pid=2" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                 </div><!--text-center-->
                         </div><!-- col-md-3 -->
 
@@ -163,7 +163,7 @@
                                         <h5 class="mt-20">Onion & Cheese</h5>
                                         <h4 class="mt-5"><b>Rs. 299</b></h4>
                                 
-                                        <h6 class="mt-20"><a href="http://localhost/DBMSPizza/indexcopy.php?pid=3" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
+                                        <h6 class="mt-20"><button href="http://localhost/DBMSPizza/indexcopy.php?pid=3" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                 </div><!--text-center-->
                         </div><!-- col-md-3 -->
 
@@ -176,7 +176,7 @@
                                         <h5 class="mt-20">Non-Veg Supreme</h5>
                                         <h4 class="mt-5"><b>Rs. 835</b></h4>
                                 
-                                        <h6 class="mt-20"><a href="http://localhost/DBMSPizza/indexcopy.php?pid=4" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
+                                        <h6 class="mt-20"><button href="http://localhost/DBMSPizza/indexcopy.php?pid=4" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                 </div><!--text-center-->
                         </div><!-- col-md-3 -->
 
