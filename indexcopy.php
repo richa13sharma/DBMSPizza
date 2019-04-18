@@ -66,7 +66,7 @@
                         <li><a href="02_about_us.html">ABOUT US</a></li>
                         <li><a href="03_menu.html">SERVICES</a></li>
                         <li><a href="04_blog.html">NEWS</a></li>
-                        <li><a href="05_contact.html">CONTACT</a></li>
+                        <li><a href="05_contact.php">CONTACT</a></li>
                 </ul>
 
                 <div class="clearfix"></div>
