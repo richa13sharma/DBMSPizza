@@ -50,7 +50,13 @@
         customerId SERIAL REFERENCES Customer(customerId),
         subtotal REAL NOT NULL,
         itemCount INT NOT NULL
-        
+    )";
+    $tableMessage = "CREATE TABLE Messages (
+        messageId SERIAL PRIMARY KEY,
+        customername VARCHAR(100),
+        customeremail VARCHAR(100),
+        subjectofmessage VARCHAR(100),
+        customermessage VARCHAR(400)
     )";
     $tableOrderDetails = "CREATE TABLE OrderDetails (
         productId SERIAL REFERENCES Product(productId),
@@ -107,3 +113,8 @@
         echo ("error\n");
     else
         echo ("success tablecart\n");
+        $tablemessage = pg_query($db, $tableMessage);
+    if(!$tableMessage)
+        echo ("error\n");
+    else
+        echo ("success tablemessage\n");
