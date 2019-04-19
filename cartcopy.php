@@ -106,6 +106,7 @@ $subtotal += $row['productprice']*$row['qty'];
   <div class='totals-value' id='cart-total'>".$subtotal*1.05."</div>
 </div>
 </div>";
+setcookie('subtotal', $subtotal*1.05, time()+86400, "/");
 if($subtotal*1.05 <= 0)
 {
   function set_url( $url )

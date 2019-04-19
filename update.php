@@ -11,7 +11,8 @@ if (!$db)
 $id = $_GET['pid'];
 // echo $id;
 //add to cart here
-$query = "UPDATE cart SET qty = qty-1 WHERE $id = productid AND customerid = '1'";
+$customerid = $_COOKIE['customerid'];
+$query = "UPDATE cart SET qty = qty-1 WHERE $id = productid AND customerid = $customerid";
 $qtycontent = "DELETE FROM cart WHERE qty <= 0";
 $prodInsert = pg_query($db, $query);
 $prodDelete = pg_query($db, $qtycontent);
