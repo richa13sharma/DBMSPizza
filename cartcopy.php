@@ -51,7 +51,7 @@ for($i=1; $i<=$num_rows ; $i++)
 ."
 </div>
 <div class='product-removal' >
-  <a class='remove-product' href = 'update.php?pid=2'>
+  <a class='remove-product' href = 'update.php?pid=".$pid."'>
     Remove
   </a>
 </div>
@@ -78,10 +78,16 @@ $subtotal += $row['productprice']*$row['qty'];
   <label>Grand Total</label>
   <div class='totals-value' id='cart-total'>".$subtotal*1.05."</div>
 </div>
-</div>
-<button class='checkout'>Checkout</button>
-    
-    </div>";
+</div>";
+if($subtotal*1.05 <= 0)
+{
+  function set_url( $url )
+  {
+      echo("<script>history.replaceState({},'','$url');</script>");
+  }
+  // set_url("http://localhost/DBMSPizza/noitems.html");
+  header("Refresh:0; url=noitems.html");
+}
 ?>
 
 <!DOCTYPE HTML>
@@ -106,9 +112,9 @@ $subtotal += $row['productprice']*$row['qty'];
 
 </head> 
 <body>
-    <script src = "cart.js"></script> 
-    
-          
+    <!-- <script src = "cart.js"></script>  -->
+    <button class='checkout'>Checkout</button>
+    </div>
           
 
 </body>
