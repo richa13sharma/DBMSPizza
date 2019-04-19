@@ -70,7 +70,7 @@
     $host = "host = localhost";
     $port = "port = 5432";
     $dbname = "dbname = speedzadb";
-    $credentials = "user = postgres password=enteryourpass";
+    $credentials = "user = postgres password=gvonly";
     
     $db = pg_connect("$host $port $dbname $credentials");
     if (!$db)
