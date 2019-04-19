@@ -11,6 +11,7 @@ if (!$db)
 
 $result = pg_query($db, "SELECT * FROM cart,product WHERE customerid = 1 AND cart.productid = product.productid");
 $num_rows = pg_num_rows($result);
+$subtotal = 0;
 
 echo "
 <h1>Shopping Cart</h1>
@@ -56,6 +57,7 @@ for($i=1; $i<=$num_rows ; $i++)
 </div>
 
 ";
+$subtotal += $row['productprice']*$row['qty'];
       }
     }
 
@@ -65,19 +67,15 @@ for($i=1; $i<=$num_rows ; $i++)
 <div class='totals'>
 <div class='totals-item'>
   <label>Subtotal</label>
-  <div class='totals-value' id='cart-subtotal'>71.97</div>
+  <div class='totals-value' id='cart-subtotal'>".$subtotal."</div>
 </div>
 <div class='totals-item'>
   <label>Tax (5%)</label>
-  <div class='totals-value' id='cart-tax'>3.60</div>
-</div>
-<div class='totals-item'>
-  <label>Shipping</label>
-  <div class='totals-value' id='cart-shipping'>15.00</div>
+  <div class='totals-value' id='cart-tax'>".$subtotal*0.05."</div>
 </div>
 <div class='totals-item totals-item-total'>
   <label>Grand Total</label>
-  <div class='totals-value' id='cart-total'>90.57</div>
+  <div class='totals-value' id='cart-total'>".$subtotal*1.05."</div>
 </div>
 </div>
 <button class='checkout'>Checkout</button>
