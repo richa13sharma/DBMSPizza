@@ -13,7 +13,7 @@
     $id = $_GET['pid'];
     // echo $id;
     //add to cart here
-    $query = "INSERT INTO cart (customerid, productid, qty) VALUES (1, $id, 1)";
+    $query = "INSERT INTO cart (customerid, productid, qty) VALUES (1, $id, 2)";
     $prodInsert = pg_query($db, $query);
     //clear url to .php only
     function set_url( $url )

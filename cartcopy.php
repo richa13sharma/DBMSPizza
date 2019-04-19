@@ -9,7 +9,7 @@ $db = pg_connect("$host $port $dbname $credentials");
 if (!$db)
     echo "Error Error \n";
 
-$result = pg_query($db, "SELECT * FROM cart WHERE customerid = 1");
+$result = pg_query($db, "SELECT * FROM cart,product WHERE customerid = 1 AND cart.productid = product.productid");
 $num_rows = pg_num_rows($result);
 
 echo "
@@ -39,10 +39,10 @@ for($i=1; $i<=$num_rows ; $i++)
   <img src='https://s.cdpn.io/3/dingo-dog-bones.jpg'>
 </div>
 <div class='product-details'>
-  <div class='product-title'>".$row['productid']."</div>
+  <div class='product-title'>".$row['productname']."</div>
   <p class='product-description'>The best dog bones of all time. Holy crap. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.</p>
 </div>
-<div class='product-price'>12.99</div>
+<div class='product-price'>".$row['productprice']."</div>
 <div class='product-quantity'>"
 .$row['qty']
 ."
@@ -52,7 +52,7 @@ for($i=1; $i<=$num_rows ; $i++)
     Remove
   </button>
 </div>
-<div class='product-line-price'>25.98</div>
+<div class='product-line-price'>".$row['productprice']*$row['qty']."</div>
 </div>
 
 ";
