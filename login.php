@@ -1,6 +1,9 @@
 
 
-<?php include('serverPostgres.php') ?>
+<?php include('serverPostgres.php') 
+ unset($_COOKIE['customerid']);
+ unset($_COOKIE['orderid']);
+?>
 <!DOCTYPE html>
 <html>
 <head>

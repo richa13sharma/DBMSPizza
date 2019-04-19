@@ -8,8 +8,8 @@ $credentials = "user = postgres password=enteryourpass";
 $db = pg_connect("$host $port $dbname $credentials");
 if (!$db)
     echo "Error Error \n";
-
-$result = pg_query($db, "SELECT * FROM cart,product WHERE customerid = 1 AND cart.productid = product.productid");
+$customerid = $_COOKIE['customerid'];
+$result = pg_query($db, "SELECT * FROM cart, product WHERE customerid = $customerid AND cart.productid = product.productid");
 $num_rows = pg_num_rows($result);
 $subtotal = 0;
 echo"
@@ -106,6 +106,7 @@ $subtotal += $row['productprice']*$row['qty'];
   <div class='totals-value' id='cart-total'>".$subtotal*1.05."</div>
 </div>
 </div>";
+setcookie('subtotal', $subtotal*1.05, time()+86400, "/");
 if($subtotal*1.05 <= 0)
 {
   function set_url( $url )

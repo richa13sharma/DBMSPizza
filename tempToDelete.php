@@ -13,5 +13,11 @@ $host = "host = localhost";
         echo $rowcustid[0];
 
     // unset($_COOKIE['$cookiename']);
-    echo "value is: ".$_COOKIE['customerid'];
+    // echo "value is: ".$_COOKIE['customerid'];
+
+    $customerid = $_COOKIE['customerid'];
+    $select = "SELECT productid FROM cart";
+    $res = pg_query($db, $select);
+    $rowcustid = pg_fetch_all($res);
+    print_r($rowcustid);
 ?>
