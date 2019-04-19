@@ -49,19 +49,12 @@ else
     $orderins = "INSERT INTO Orders (customerid, subtotal, itemcount) 
             VALUES (1, 344, 3),
                    (2, 433, 3)";
-    $order = pg_query($db, $orderins);
+//     $order = pg_query($db, $orderins);
 
-    $func = "CREATE OR REPLACE FUNCTION updatetables
-                RETURN trigger AS 
-                $BODY$
-                BEGIN
-                        INSERT INTO product_category VALUES (productid, categoryid);
-                END;
-    ";
-    
-    $trigger = "CREATE TRIGGER UpdateTable
-                        AFTER -- Update rows in table 'product_category'
-                        UPDATE ON Product
-                        FOR EACH ROW
-                        EXECUTE PROCEDURE updatetables";
+    $trigger = "CREATE TRIGGER `AfterProdInsert` BEFORE INSERT ON `Product` FOR EACH ROW 
+    BEGIN
+        INSERT INTO product_category
+        SET productid  = 'new.productid',
+        categoryid       =  'new.categoryid'
+    END"
 ?>
