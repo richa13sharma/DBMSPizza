@@ -35,6 +35,7 @@
                         <li><a href="03_menu.html">SERVICES</a></li>
                         <li><a href="04_blog.html">NEWS</a></li>
                         <li><a href="05_contact.php">CONTACT</a></li>
+                        <li><a href="cartcopy.php">CART</a></li>
                 </ul>
 
                 <div class="clearfix"></div>
