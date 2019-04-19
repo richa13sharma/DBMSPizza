@@ -66,7 +66,7 @@ for($i=1; $i<=$num_rows ; $i++)
         echo"    
 <div class='product'>
 <div class='product-image'>
-  <img src='https://s.cdpn.io/3/dingo-dog-bones.jpg'>
+  <img src='D:\Code\XAMPP\htdocs\DBMSPizza\images\seller-2-200x200.png'>
 </div>
 <div class='product-details'>
   <div class='product-title'>".$row['productname']."</div>
