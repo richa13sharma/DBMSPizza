@@ -28,12 +28,14 @@ echo "
       </div>
 ";
 
+
 for($i=1; $i<=$num_rows ; $i++)
 {
   for($j=1; $j<=3; $j++)
   {
       while($row = pg_fetch_array($result))
       {
+        $pid=$row['productid'];
         echo"    
 <div class='product'>
 <div class='product-image'>
@@ -48,14 +50,13 @@ for($i=1; $i<=$num_rows ; $i++)
 .$row['qty']
 ."
 </div>
-<div class='product-removal'>
-  <button class='remove-product'>
+<div class='product-removal' >
+  <a class='remove-product' href = 'update.php?pid=2'>
     Remove
-  </button>
+  </a>
 </div>
 <div class='product-line-price'>".$row['productprice']*$row['qty']."</div>
 </div>
-
 ";
 $subtotal += $row['productprice']*$row['qty'];
       }
@@ -105,7 +106,7 @@ $subtotal += $row['productprice']*$row['qty'];
 
 </head> 
 <body>
-    <!-- <style src = "cart.js"></style>  -->
+    <script src = "cart.js"></script> 
     
           
           
