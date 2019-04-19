@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -362,7 +366,6 @@
 
 </body>
 </html>
-
 <?php
     $host = "host = localhost";
     $port = "port = 5432";
@@ -374,12 +377,13 @@
         echo "Error Error \n";
     // else
     //     echo "Connection successful \n";
-        
+    $customerid = $_COOKIE['customerid'];
     $id = $_GET['pid'];
     if($id)
-    {// echo $id;
+    {
+    // echo $id;
     //add to cart here
-    $query = "INSERT INTO cart (customerid, productid, qty) VALUES (1, $id, 1)";
+    $query = "INSERT INTO cart (customerid, productid, qty) VALUES ($customerid, $id, 1)";
     $prodInsert = pg_query($db, $query);
     //clear url to .php only
     function set_url( $url )
@@ -387,6 +391,7 @@
         echo("<script>history.replaceState({},'','$url');</script>");
     }
     set_url("http://localhost/DBMSPizza/indexcopy.php#sec");
-
 }
+
+
 ?>

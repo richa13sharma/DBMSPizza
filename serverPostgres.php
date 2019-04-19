@@ -55,7 +55,13 @@
       pg_query($db, $insertUser);
       $_SESSION['email'] = $username;
       $_SESSION['success'] = "You are now logged in";
-      header('location: index.html');
+      header('location: indexcopy.php');
+      $custid = "SELECT customerid FROM Customer WHERE customeremail='$email' ";
+        $custidres = pg_query($db, $custid);
+        $rowcustid = pg_fetch_array($custidres);
+        $cookiename = "customerid";
+        $cookievalue = $rowcustid[0];
+        setcookie($cookiename, $cookievalue, time() + (86400), "/");
   }
 }
 
@@ -100,6 +106,7 @@ if (isset($_POST['login_user'])) {
   }
 
   if (count($errors) == 0) {  
+      session_start();
       $password = md5($password);
       echo $password;
       echo $email;
@@ -116,7 +123,13 @@ if (isset($_POST['login_user'])) {
       if (pg_num_rows($results) >= 1) {
         $_SESSION['email'] = $username;
         $_SESSION['success'] = "You are now logged in";
-        header('location: index.html');
+        header('location: indexcopy.php');
+        $custid = "SELECT customerid FROM Customer WHERE customeremail='$email' ";
+        $custidres = pg_query($db, $custid);
+        $rowcustid = pg_fetch_array($custidres);
+        $cookiename = "customerid";
+        $cookievalue = $rowcustid[0];
+        setcookie($cookiename, $cookievalue, time() + (86400), "/");
       }
       else {
           array_push($errors, "Wrong email/password combination");
