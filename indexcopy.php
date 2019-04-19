@@ -1,9 +1,3 @@
-
-
-
-
-
-
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -382,7 +376,8 @@
     //     echo "Connection successful \n";
         
     $id = $_GET['pid'];
-    // echo $id;
+    if($id)
+    {// echo $id;
     //add to cart here
     $query = "INSERT INTO cart (customerid, productid, qty) VALUES (1, $id, 1)";
     $prodInsert = pg_query($db, $query);
@@ -393,5 +388,5 @@
     }
     set_url("http://localhost/DBMSPizza/indexcopy.php#sec");
 
-
+}
 ?>
