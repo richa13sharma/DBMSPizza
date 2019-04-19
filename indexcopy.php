@@ -146,7 +146,7 @@
                                                 <img src="images/seller-2-200x200.png" alt="">
                                         </div>
                                         <h5 class="mt-20">Non-Veg Supreme</h5>
-                                        <h4 class="mt-5"><b>Rs. 835</b></h4>
+                                        <h4 class="mt-5"><b>Rs. 435</b></h4>
                                 
                                         <h6 class="mt-20"><a href="http://localhost/DBMSPizza/indexcopy.php?pid=4" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                 </div><!--text-center-->
@@ -155,10 +155,10 @@
                         <div class="col-lg-3 col-md-4  col-sm-6 ">
                                 <div class="center-text mb-30">
                                         <div class="ïmg-200x mlr-auto pos-relative"><img src="images/seller-2-200x200.png" alt=""></div>
-                                        <h5 class="mt-20">Pizza Margherita</h5>
-                                        <h4 class="mt-5"><b>$11.90</b></h4>
+                                        <h5 class="mt-20">Pineapple Pizza</h5>
+                                        <h4 class="mt-5"><b>RS. 450</b></h4>
                                 
-                                        <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
+                                        <h6 class="mt-20"><a href="http://localhost/DBMSPizza/indexcopy.php?pid=5" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                 </div><!--text-center-->
                         </div><!-- col-md-3 -->
 
@@ -168,10 +168,10 @@
                                                 <h6 class="ribbon-cont"><div class="ribbon primary"></div><b>OFFER</b></h6>
                                                 <img src="images/seller-2-200x200.png" alt="">
                                         </div>
-                                        <h5 class="mt-20">Pizza Margherita</h5>
-                                        <h4 class="mt-5"><b>$11.90</b></h4>
+                                        <h5 class="mt-20">Four Cheese Pizza</h5>
+                                        <h4 class="mt-5"><b>Rs. 500</b></h4>
                                 
-                                        <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
+                                        <h6 class="mt-20"><a href="http://localhost/DBMSPizza/indexcopy.php?pid=6" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                 </div><!--text-center-->
                         </div><!-- col-md-3 -->
 
@@ -181,20 +181,20 @@
                                                 <h6 class="ribbon-cont color-black"><div class="ribbon white"></div><b>PLUS SIZE</b></h6>
                                                 <img src="images/seller-2-200x200.png" alt="">
                                         </div>
-                                        <h5 class="mt-20">Pizza Margherita</h5>
-                                        <h4 class="mt-5"><b>$11.90</b></h4>
+                                        <h5 class="mt-20">Pizza Napoleon</h5>
+                                        <h4 class="mt-5"><b>Rs. 550</b></h4>
                                 
-                                        <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
+                                        <h6 class="mt-20"><a href="http://localhost/DBMSPizza/indexcopy.php?pid=7" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                 </div><!--text-center-->
                         </div><!-- col-md-3 -->
 
                         <div class="col-lg-3 col-md-4  col-sm-6 ">
                                 <div class="center-text mb-30">
                                         <div class="ïmg-200x mlr-auto pos-relative"><img src="images/seller-2-200x200.png" alt=""></div>
-                                        <h5 class="mt-20">Pizza Margherita</h5>
-                                        <h4 class="mt-5"><b>$11.90</b></h4>
+                                        <h5 class="mt-20">Pizza Proscuito</h5>
+                                        <h4 class="mt-5"><b>Rs. 700</b></h4>
                                 
-                                        <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
+                                        <h6 class="mt-20"><a href="http://localhost/DBMSPizza/indexcopy.php?pid=8" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                 </div><!--text-center-->
                         </div><!-- col-md-3 -->
                 </div><!-- row -->
@@ -228,11 +228,11 @@
                                 <div class="sided-90x mb-30 ">
                                         <div class="s-left"><img class="br-3" src="images/menu-1-120x120.jpg" alt="Menu Image"></div><!--s-left-->
                                         <div class="s-right">
-                                                <h5 class="mb-10"><b>Pizza Margherita</b><b class="color-primary float-right">$12.00</b></h5>
+                                                <h5 class="mb-10"><b>Pizza Margherita</b><b class="color-primary float-right">Rs. 399</b></h5>
                                                 <p class="pr-70">
                                                         Maecenas fermentum tortor id fringilla molestie. In hac habitasse platea dictumst. </p>
                                         
-                                                <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
+                                                <h6 class="mt-20"><a href="http://localhost/DBMSPizza/indexcopy.php?pid=2" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                         </div><!--s-right-->
                                 </div><!-- sided-90x -->
                         </div><!-- food-menu -->
@@ -241,10 +241,10 @@
                                 <div class="sided-90x mb-30 ">
                                         <div class="s-left"><img class="br-3" src="images/menu-2-120x120.jpg" alt="Menu Image"></div><!--s-left-->
                                         <div class="s-right">
-                                                <h5 class="mb-10"><b>Italian pasta</b><b class="color-primary float-right">$20.00</b></h5>
+                                                <h5 class="mb-10"><b>Italian pasta pizza</b><b class="color-primary float-right"> Rs 650</b></h5>
                                                 <p class="pr-70">Proin dictum viverra varius. Etiam vulputate libero dui, at pretium elit elementum quis. </p>
                                         
-                                                <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
+                                                <h6 class="mt-20"><a href="http://localhost/DBMSPizza/indexcopy.php?pid=10" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                         </div><!--s-right-->
                                 </div><!-- sided-90x -->
                         </div><!-- food-menu -->
@@ -253,10 +253,10 @@
                                 <div class="sided-90x mb-30 ">
                                         <div class="s-left"><img class="br-3" src="images/menu-3-120x120.jpg" alt="Menu Image"></div><!--s-left-->
                                         <div class="s-right">
-                                                <h5 class="mb-10"><b>Pizza Prosciuto</b><b class="color-primary float-right">$12.00</b></h5>
+                                                <h5 class="mb-10"><b>Seafood Pasta</b><b class="color-primary float-right">Rs.700</b></h5>
                                                 <p class="pr-70">Maecenas fermentum tortor id fringilla molestie. In hac habitasse platea dictumst. </p>
                                         
-                                                <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
+                                                <h6 class="mt-20"><a href="http://localhost/DBMSPizza/indexcopy.php?pid=15" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                         </div><!--s-right-->
                                 </div><!-- sided-90x -->
                         </div><!-- food-menu -->
@@ -265,10 +265,10 @@
                                 <div class="sided-90x mb-30">
                                         <div class="s-left"><img class="br-3" src="images/menu-4-120x120.jpg" alt="Menu Image"></div><!--s-left-->
                                         <div class="s-right">
-                                                <h5 class="mb-10"><b>Broschettas</b><b class="color-primary float-right">$6.00</b></h5>
+                                                <h5 class="mb-10"><b>Broschettas</b><b class="color-primary float-right">Rs. 250</b></h5>
                                                 <p class="pr-70">Proin dictum viverra varius. Etiam vulputate libero dui, at pretium elit elementum quis. </p>
                                         
-                                                <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
+                                                <h6 class="mt-20"><a href="http://localhost/DBMSPizza/indexcopy.php?pid=9" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                         </div><!--s-right-->
                                 </div><!-- sided-90x -->
                         </div><!-- food-menu -->
@@ -276,10 +276,10 @@
                                 <div class="sided-90x mb-30">
                                         <div class="s-left"><img class="br-3" src="images/menu-5-120x120.jpg" alt="Menu Image"></div><!--s-left-->
                                         <div class="s-right">
-                                                <h5 class="mb-10"><b>Pizza Margherita</b><b class="color-primary float-right">$12.00</b></h5>
+                                                <h5 class="mb-10"><b>Tiramisu</b><b class="color-primary float-right">Rs. 300</b></h5>
                                                 <p class="pr-70">Maecenas fermentum tortor id fringilla molestie. In hac habitasse platea dictumst. </p>
                                         
-                                                <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
+                                                <h6 class="mt-20"><a href="http://localhost/DBMSPizza/indexcopy.php?pid=14" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                         </div><!--s-right-->
                                 </div><!-- sided-90x -->
                         </div><!-- food-menu -->
@@ -288,10 +288,10 @@
                                 <div class="sided-90x mb-30 ">
                                         <div class="s-left"><img class="br-3" src="images/menu-6-120x120.jpg" alt="Menu Image"></div><!--s-left-->
                                         <div class="s-right">
-                                                <h5 class="mb-10"><b>Italian pasta</b><b class="color-primary float-right">$20.00</b></h5>
+                                                <h5 class="mb-10"><b>Italian seafood pizza</b><b class="color-primary float-right">Rs. 800</b></h5>
                                                 <p class="pr-70">Proin dictum viverra varius. Etiam vulputate libero dui, at pretium elit elementum quis. </p>
                                         
-                                                <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
+                                                <h6 class="mt-20"><a href="http://localhost/DBMSPizza/indexcopy.php?pid=12" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                         </div><!--s-right-->
                                 </div><!-- sided-90x -->
                         </div><!-- food-menu -->
@@ -300,10 +300,10 @@
                                 <div class="sided-90x mb-30">
                                         <div class="s-left"><img class="br-3" src="images/menu-7-120x120.jpg"  alt="Menu Image"></div><!--s-left-->
                                         <div class="s-right">
-                                                <h5 class="mb-10"><b>Pizza Prosciuto</b><b class="color-primary float-right">$12.00</b></h5>
+                                                <h5 class="mb-10"><b>Chocolate Pizza</b><b class="color-primary float-right">Rs 400</b></h5>
                                                 <p class="pr-70">Maecenas fermentum tortor id fringilla  molestie. In hac habitasse platea dictumst. </p>
                                         
-                                                <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
+                                                <h6 class="mt-20"><a href="http://localhost/DBMSPizza/indexcopy.php?pid=13" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                         </div><!--s-right-->
                                 </div><!-- sided-90x -->
                         </div><!-- food-menu -->
@@ -312,10 +312,10 @@
                                 <div class="sided-90x mb-30 ">
                                         <div class="s-left"><img class="br-3" src="images/menu-8-120x120.jpg" alt="Menu Image"></div><!--s-left-->
                                         <div class="s-right">
-                                                <h5 class="mb-10"><b>Broschettas</b><b class="color-primary float-right">$6.00</b></h5>
+                                                <h5 class="mb-10"><b>Italian Pasta</b><b class="color-primary float-right">Rs 500</b></h5>
                                                 <p class="pr-70">Proin dictum viverra varius. Etiam vulputate libero dui, at pretium elit elementum quis. </p>
                                         
-                                                <h6 class="mt-20"><a onclick="add()" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
+                                                <h6 class="mt-20"><a href="http://localhost/DBMSPizza/indexcopy.php?pid=10" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
                                         </div><!--s-right-->
                                 </div><!-- sided-90x -->
                         </div><!-- food-menu -->
