@@ -31,12 +31,14 @@
                 <a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>
 
                 <ul class="main-menu font-mountainsre" id="main-menu">
-                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="indexcopy.php">HOME</a></li>
                         <li><a href="02_about_us.html">ABOUT US</a></li>
                         <li><a href="03_menu.html">SERVICES</a></li>
                         <li><a href="04_blog.html">NEWS</a></li>
                         <li><a href="05_contact.php">CONTACT</a></li>
                         <li><a href="cartcopy.php">CART</a></li>
+                        
+                        <li><a href="signup.php">LOGOUT</a></li>
                 </ul>
 
                 <div class="clearfix"></div>
@@ -362,7 +364,6 @@
 
 </body>
 </html>
-
 <?php
     $host = "host = localhost";
     $port = "port = 5432";
@@ -376,6 +377,8 @@
     //     echo "Connection successful \n";
     $customerid = $_COOKIE['customerid'];
     $id = $_GET['pid'];
+    if($id)
+    {
     // echo $id;
     //add to cart here
     $cart_check_query = "SELECT * FROM cart WHERE customerid='$customerid' AND productid='$id' ";
@@ -392,9 +395,13 @@
                 $prodInsert = pg_query($db, $query);
         }
         //clear url to .php only
+    $query = "INSERT INTO cart (customerid, productid, qty) VALUES ($customerid, $id, 1)";
+    $prodInsert = pg_query($db, $query);
+    //clear url to .php only
     function set_url( $url )
     {
         echo("<script>history.replaceState({},'','$url');</script>");
     }
     set_url("http://localhost/DBMSPizza/indexcopy.php#sec");
+}
 ?>
