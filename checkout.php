@@ -52,7 +52,9 @@
                         <li><a href="02_about_us.html">ABOUT US</a></li>
                         <li><a href="03_menu.html">SERVICES</a></li>
                         <li><a href="04_blog.html">NEWS</a></li>
-                        <li><a href="05_contact.html">CONTACT</a></li>
+                        <li><a href="05_contact.php">CONTACT</a></li>
+                        
+                        <li><a href="signup.php">LOGOUT</a></li>
                 </ul>
 
                 <div class="clearfix"></div>
@@ -63,7 +65,7 @@
                     
                     <br>
                     <br>
-               <h3 align ="center"> <a href = "index.html" >Go back to homepage?</a> </h3>
+               <h3 align ="center"> <a href = "indexcopy.php" >Go back to homepage?</a> </h3>
 
                         
 
