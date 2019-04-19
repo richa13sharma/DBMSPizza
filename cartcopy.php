@@ -11,6 +11,7 @@ if (!$db)
 
 $result = pg_query($db, "SELECT * FROM cart,product WHERE customerid = 1 AND cart.productid = product.productid");
 $num_rows = pg_num_rows($result);
+$subtotal = 0;
 
 echo "
 <h1>Shopping Cart</h1>
@@ -27,12 +28,14 @@ echo "
       </div>
 ";
 
+
 for($i=1; $i<=$num_rows ; $i++)
 {
   for($j=1; $j<=3; $j++)
   {
       while($row = pg_fetch_array($result))
       {
+        $pid=$row['productid'];
         echo"    
 <div class='product'>
 <div class='product-image'>
@@ -47,15 +50,15 @@ for($i=1; $i<=$num_rows ; $i++)
 .$row['qty']
 ."
 </div>
-<div class='product-removal'>
-  <button class='remove-product'>
+<div class='product-removal' >
+  <a class='remove-product' href = 'update.php?pid=".$pid."'>
     Remove
-  </button>
+  </a>
 </div>
 <div class='product-line-price'>".$row['productprice']*$row['qty']."</div>
 </div>
-
 ";
+$subtotal += $row['productprice']*$row['qty'];
       }
     }
 
@@ -65,24 +68,26 @@ for($i=1; $i<=$num_rows ; $i++)
 <div class='totals'>
 <div class='totals-item'>
   <label>Subtotal</label>
-  <div class='totals-value' id='cart-subtotal'>71.97</div>
+  <div class='totals-value' id='cart-subtotal'>".$subtotal."</div>
 </div>
 <div class='totals-item'>
   <label>Tax (5%)</label>
-  <div class='totals-value' id='cart-tax'>3.60</div>
-</div>
-<div class='totals-item'>
-  <label>Shipping</label>
-  <div class='totals-value' id='cart-shipping'>15.00</div>
+  <div class='totals-value' id='cart-tax'>".$subtotal*0.05."</div>
 </div>
 <div class='totals-item totals-item-total'>
   <label>Grand Total</label>
-  <div class='totals-value' id='cart-total'>90.57</div>
+  <div class='totals-value' id='cart-total'>".$subtotal*1.05."</div>
 </div>
-</div>
-<button class='checkout'>Checkout</button>
-    
-    </div>";
+</div>";
+if($subtotal*1.05 <= 0)
+{
+  function set_url( $url )
+  {
+      echo("<script>history.replaceState({},'','$url');</script>");
+  }
+  // set_url("http://localhost/DBMSPizza/noitems.html");
+  header("Refresh:0; url=noitems.html");
+}
 ?>
 
 <!DOCTYPE HTML>
@@ -107,9 +112,9 @@ for($i=1; $i<=$num_rows ; $i++)
 
 </head> 
 <body>
-    <!-- <style src = "cart.js"></style>  -->
-    
-          
+    <!-- <script src = "cart.js"></script>  -->
+    <button class='checkout'>Checkout</button>
+    </div>
           
 
 </body>

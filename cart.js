@@ -75,3 +75,9 @@ function removeItem(removeButton)
     recalculateCart();
   });
 }
+
+function qty(id)
+{
+  var qty = prompt("Enter quantity");
+  window.location.search += '?pid=' + id + '&qty=' + qty;
+}

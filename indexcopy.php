@@ -23,7 +23,6 @@
     set_url("http://localhost/DBMSPizza/indexcopy.php#sec");
 
 
-?>
 
 
 
@@ -67,6 +66,7 @@
                         <li><a href="03_menu.html">SERVICES</a></li>
                         <li><a href="04_blog.html">NEWS</a></li>
                         <li><a href="05_contact.php">CONTACT</a></li>
+                        <li><a href="cartcopy.php">CART</a></li>
                 </ul>
 
                 <div class="clearfix"></div>
@@ -144,7 +144,7 @@
                                         <h4 class="mt-5"><b>Rs. 499</b></h4>
                                 
                                         <h6 class="mt-20"><a href="http://localhost/DBMSPizza/indexcopy.php?pid=1" class="btn-brdr-primary plr-25"><b>Add to cart</b></a></h6>
-                                </div><!--text-center-->
+                                         </div><!--text-center-->
                         </div><!-- col-md-3 -->
 
                         <div class="col-lg-3 col-md-4  col-sm-6 ">
@@ -392,3 +392,30 @@
 
 </body>
 </html>
+
+<?php
+    $host = "host = localhost";
+    $port = "port = 5432";
+    $dbname = "dbname = speedzadb";
+    $credentials = "user = postgres password=enteryourpass";
+    
+    $db = pg_connect("$host $port $dbname $credentials");
+    if (!$db)
+        echo "Error Error \n";
+    // else
+    //     echo "Connection successful \n";
+        
+    $id = $_GET['pid'];
+    // echo $id;
+    //add to cart here
+    $query = "INSERT INTO cart (customerid, productid, qty) VALUES (1, $id, 1)";
+    $prodInsert = pg_query($db, $query);
+    //clear url to .php only
+    function set_url( $url )
+    {
+        echo("<script>history.replaceState({},'','$url');</script>");
+    }
+    set_url("http://localhost/DBMSPizza/indexcopy.php#sec");
+
+
+?>
