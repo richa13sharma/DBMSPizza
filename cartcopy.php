@@ -1,4 +1,16 @@
 <?php
+
+$host = "host = localhost";
+$port = "port = 5432";
+$dbname = "dbname = speedzadb";
+$credentials = "user = postgres password=enteryourpass";
+
+$db = pg_connect("$host $port $dbname $credentials");
+if (!$db)
+    echo "Error Error \n";
+
+$result = pg_query($db, "SELECT * FROM cart WHERE customerid = 1");
+$num_rows = pg_num_rows($result);
 echo "
 <h1>Shopping Cart</h1>
 
