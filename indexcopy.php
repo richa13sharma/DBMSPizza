@@ -9,11 +9,11 @@
         echo "Error Error \n";
     // else
     //     echo "Connection successful \n";
-        
+    $customerid = $_COOKIE['customerid'];
     $id = $_GET['pid'];
     // echo $id;
     //add to cart here
-    $query = "INSERT INTO cart (customerid, productid, qty) VALUES (1, $id, 2)";
+    $query = "INSERT INTO cart (customerid, productid, qty) VALUES ($customerid, $id, 1)";
     $prodInsert = pg_query($db, $query);
     //clear url to .php only
     function set_url( $url )
