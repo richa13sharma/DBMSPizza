@@ -1,29 +1,4 @@
-<?php
-    $host = "host = localhost";
-    $port = "port = 5432";
-    $dbname = "dbname = speedzadb";
-    $credentials = "user = postgres password=enteryourpass";
-    
-    $db = pg_connect("$host $port $dbname $credentials");
-    if (!$db)
-        echo "Error Error \n";
-    // else
-    //     echo "Connection successful \n";
-        
-    $id = $_GET['pid'];
-    // echo $id;
-    //add to cart here
-    $query = "INSERT INTO cart (customerid, productid, qty) VALUES (1, $id, 1)";
-    $prodInsert = pg_query($db, $query);
-    //clear url to .php only
-    function set_url( $url )
-    {
-        echo("<script>history.replaceState({},'','$url');</script>");
-    }
-    set_url("http://localhost/DBMSPizza/indexcopy.php#sec");
 
-
-?>
 
 
 
@@ -393,3 +368,30 @@
 
 </body>
 </html>
+
+<?php
+    $host = "host = localhost";
+    $port = "port = 5432";
+    $dbname = "dbname = speedzadb";
+    $credentials = "user = postgres password=enteryourpass";
+    
+    $db = pg_connect("$host $port $dbname $credentials");
+    if (!$db)
+        echo "Error Error \n";
+    // else
+    //     echo "Connection successful \n";
+        
+    $id = $_GET['pid'];
+    // echo $id;
+    //add to cart here
+    $query = "INSERT INTO cart (customerid, productid, qty) VALUES (1, $id, 1)";
+    $prodInsert = pg_query($db, $query);
+    //clear url to .php only
+    function set_url( $url )
+    {
+        echo("<script>history.replaceState({},'','$url');</script>");
+    }
+    set_url("http://localhost/DBMSPizza/indexcopy.php#sec");
+
+
+?>
