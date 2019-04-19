@@ -1,33 +1,3 @@
-<?php
-    $host = "host = localhost";
-    $port = "port = 5432";
-    $dbname = "dbname = speedzadb";
-    $credentials = "user = postgres password=enteryourpass";
-    
-    $db = pg_connect("$host $port $dbname $credentials");
-    if (!$db)
-        echo "Error Error \n";
-    // else
-    //     echo "Connection successful \n";
-    $customerid = $_COOKIE['customerid'];
-    $id = $_GET['pid'];
-    // echo $id;
-    //add to cart here
-    $query = "INSERT INTO cart (customerid, productid, qty) VALUES ($customerid, $id, 1)";
-    $prodInsert = pg_query($db, $query);
-    //clear url to .php only
-    function set_url( $url )
-    {
-        echo("<script>history.replaceState({},'','$url');</script>");
-    }
-    set_url("http://localhost/DBMSPizza/indexcopy.php#sec");
-
-
-
-
-
-
-
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -404,18 +374,27 @@
         echo "Error Error \n";
     // else
     //     echo "Connection successful \n";
-        
+    $customerid = $_COOKIE['customerid'];
     $id = $_GET['pid'];
     // echo $id;
     //add to cart here
-    $query = "INSERT INTO cart (customerid, productid, qty) VALUES (1, $id, 1)";
-    $prodInsert = pg_query($db, $query);
-    //clear url to .php only
+    $cart_check_query = "SELECT * FROM cart WHERE customerid='$customerid' AND productid='$id' ";
+    $result = pg_query($db, $cart_check_query);
+    $user = pg_fetch_assoc($result);
+        $query = "UPDATE cart SET qty=qty+1 WHERE customerid='$customerid' AND productid='$id'";
+        $produpdate = pg_query($db, $query);
+        $qty = "SELECT qty FROM cart WHERE customerid='$customerid' ";
+        $qtyres = pg_query($db, $qty);
+        $rowqty = pg_fetch_array($qtyres);
+        if($user['customerid'] != $customerid and $user['productid'] != $id)
+        {
+                $query = "INSERT INTO cart (customerid, productid, qty) VALUES ($customerid, $id, 1) ";
+                $prodInsert = pg_query($db, $query);
+        }
+        //clear url to .php only
     function set_url( $url )
     {
         echo("<script>history.replaceState({},'','$url');</script>");
     }
     set_url("http://localhost/DBMSPizza/indexcopy.php#sec");
-
-
 ?>
