@@ -14,7 +14,7 @@ else
     $category = "INSERT INTO Category (categoryName)
             VALUES ('Appetizer'),
                    ('Entree'),
-                   ('Side Item'),
+                   ('Dessert'),
                    ('Beverage'),
                    ('Salad')";
     
@@ -26,10 +26,13 @@ else
                    (299, 'Classic Onion and Cheese Pizza', 'Onion&Cheese', 'true', 2),
                    (59, 'DrinkCola', 'Coca-Cola', 'true', 4),
                    (835, 'Supreme Combination of all Veggies and Grilled Chicken', 'Non Veg Supreme', 'false', 2),
-                   (149, 'Get the taste of a Burger and a Pizza in One', 'Burger Pizza Classic Veg', 'true', 3),
-                   (199, 'Get the taste of a Burger and a Pizza in One - Supreme', 'Burger Pizza Supreme Non Veg', 'false', 3),
-                   (95, 'Breadsticks With Cheesy Dips', 'Garlic Breadsticks', 'true', 3),
-                   (109, 'Go Healthy with a Fresh Green Salad', 'Vegetable Salad', 'true', 5)";
+                   (250, 'Cheese and veggies', 'Broschetta', 'true', 1),
+                   (700, 'Chicken and ham ', 'Pizza Proscuito', 'false', 2),
+                   (550, 'Blue cheese and olives', 'Pizza Napoleon', 'true', 2),
+                   (400, 'Chocolate with whipped cream', 'Chocolate Pizza', 'true', 3)
+                   (300, 'Italian classic', 'Tiramisu', 'true', 3)
+
+                   (450, 'Pineapple on Pizza', 'Pineapple Pizza', 'true', 2)";
 
     // $prodInsert = pg_query($db, $prod);
 
