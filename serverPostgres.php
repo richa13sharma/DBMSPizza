@@ -104,7 +104,10 @@ if (isset($_POST['login_user'])) {
       echo $password;
       echo $email;
       $query = "SELECT * FROM customer WHERE customeremail='$email' AND customerpassword='$password'";
+      $query1 ="SELECT customerid FROM customer WHERE customeremail='$email' AND customerpassword='$password'";
+       
       $results = pg_query($db, $query);
+      $results1 = pg_query($db, $query1);
       $user = pg_fetch_all($results);
       print_r($user);
       // $user = pg_fetch_assoc($results);

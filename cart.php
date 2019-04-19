@@ -75,13 +75,12 @@
     $db = pg_connect("$host $port $dbname $credentials");
     if (!$db)
         echo "Error Error \n";
-    else
-        echo "connection success\n";
+
     $result = pg_query($db, "SELECT * FROM cart WHERE customerid = 1");
     $num_rows = pg_num_rows($result);
-    $rows =  $num_rows/3;
+//     $rows =  $num_rows/3;
 
-for($i=1; $i<=$rows ; $i++)
+for($i=1; $i<=$num_rows ; $i++)
 {
     echo "<tr>";
     for($j=1; $j<=3; $j++)
