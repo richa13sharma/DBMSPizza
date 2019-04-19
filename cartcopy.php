@@ -25,7 +25,7 @@ echo"
                 <a class='menu-nav-icon' data-menu='#main-menu' href='#'><i class='ion-navicon'></i></a>
 
                 <ul class='main-menu font-mountainsre' id='main-menu'>
-                        <li><a href='index.html'>HOME</a></li>
+                        <li><a href='indexcopy.php'>HOME</a></li>
                         <li><a href='02_about_us.html'>ABOUT US</a></li>
                         <li><a href='03_menu.html'>SERVICES</a></li>
                         <li><a href='04_blog.html'>NEWS</a></li>
@@ -142,7 +142,7 @@ if($subtotal*1.05 <= 0)
 
 
     <!-- <script src = "cart.js"></script>  -->
-    <button class='checkout'>Checkout</button>
+    <a class='checkout' href = "checkout.php">Checkout</a>
     </div>
           
 
