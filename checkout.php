@@ -19,7 +19,7 @@ $insertdetails = "INSERT INTO orderdetails (productid)
                     WHERE customerid='$customerid')";
 $res2 = pg_query($db, $insertdetails);
 
-$removecart = "DELETE FROM cart";
+$removecart = "DELETE FROM cart WHERE customerid = '$customerid'";
 $res3 = pg_query($db, $removecart);
 
 header("Refresh:0; url=http://localhost/DBMSPizza/thankyou.php");

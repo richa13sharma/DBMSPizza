@@ -1,8 +1,10 @@
 
 
-<?php include('serverPostgres.php') 
- unset($_COOKIE['customerid']);
- unset($_COOKIE['orderid']);
+<?php include('serverPostgres.php'); 
+if (isset($_COOKIE['customerid']))
+	unset($_COOKIE['customerid']);
+if (isset($_COOKE['orderid']))
+	unset($_COOKIE['orderid']);
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,7 +26,7 @@
   	<div class="input-group">
   		<label>Email</label>
   		<input type="text" name="email" >
-		</div>
+		</div>	
 		<br>
   	<div class="input-group">
   		<label>Password</label>
