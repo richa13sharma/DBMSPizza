@@ -49,7 +49,7 @@
         orderId SERIAL PRIMARY KEY,
         customerId SERIAL REFERENCES Customer(customerId),
         subtotal REAL NOT NULL,
-        itemCount INT NOT NULL
+        itemCount INT NOT NULL,
     )";
     $tableMessage = "CREATE TABLE Messages (
         messageId SERIAL PRIMARY KEY,
@@ -58,10 +58,10 @@
         subjectofmessage VARCHAR(100),
         customermessage VARCHAR(400)
     )";
-    $tableOrderDetails = "CREATE TABLE OrderDetails (
-        productId SERIAL REFERENCES Product(productId),
-        orderId SERIAL REFERENCES Orders(orderId)
-    )";
+    // $tableOrderDetails = "CREATE TABLE OrderDetails (
+    //     productId SERIAL REFERENCES Product(productId),
+    //     orderId SERIAL REFERENCES Orders(orderId)
+    // )";
     // $tableCart = "CREATE TABLE Cart (
     //     productId SERIAL REFERENCES product(productid),
     //     productQty INT
