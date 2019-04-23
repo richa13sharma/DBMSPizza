@@ -48,8 +48,7 @@
     }
 
   if (count($errors) == 0){
-      $password = md5($password);
-
+      $password = md5($password_1);
       $insertUser = "INSERT INTO Customer (customername, customeremail, customerphone, customerpassword)
                     VALUES ('$name', '$email', '$phone', '$password')";
       pg_query($db, $insertUser);
