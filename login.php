@@ -5,6 +5,9 @@ if (isset($_COOKIE['customerid']))
 	unset($_COOKIE['customerid']);
 if (isset($_COOKE['orderid']))
 	unset($_COOKIE['orderid']);
+if (isset($_COOKE['subtotal']))
+	unset($_COOKIE['subtotal']);
+
 ?>
 <!DOCTYPE html>
 <html>

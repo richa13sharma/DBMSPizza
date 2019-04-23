@@ -13,12 +13,6 @@ $subtotal = $_COOKIE['subtotal'];
 $insertorder = "INSERT INTO orders (customerid, subtotal, itemcount) 
                 VALUES('$customerid', '$subtotal', (SELECT SUM(qty) FROM cart WHERE customerid='$customerid'))";
 $res = pg_query($db, $insertorder);
-$insertdetails = "INSERT INTO orderdetails (productid) 
-                    VALUES((SELECT productid)
-                    FROM cart
-                    WHERE customerid='$customerid')";
-$res2 = pg_query($db, $insertdetails);
-
 $removecart = "DELETE FROM cart WHERE customerid = '$customerid'";
 $res3 = pg_query($db, $removecart);
 
