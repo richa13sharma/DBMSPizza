@@ -1,23 +1,3 @@
-<?php
-$host = "host = localhost";
-$port = "port = 5432";
-$dbname = "dbname = speedzadb";
-$credentials = "user = postgres password=enteryourpass";
-
-$db = pg_connect("$host $port $dbname $credentials");
-if (!$db)
-    echo "Error Error \n";
-
-$customerid = $_COOKIE['customerid'];
-$subtotal = $_COOKIE['subtotal'];
-$insertorder = "INSERT INTO orders (customerid, subtotal, itemcount) 
-                VALUES('$customerid', '$subtotal', (SELECT SUM(qty) FROM cart WHERE customerid='$customerid'))";
-$res = pg_query($db, $insertorder);
-$removecart = "DELETE FROM cart WHERE customerid = '$customerid'";
-$res3 = pg_query($db, $removecart);
-
-header("Refresh:0; url=http://localhost/DBMSPizza/thankyou.php");
-?>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -62,7 +42,7 @@ header("Refresh:0; url=http://localhost/DBMSPizza/thankyou.php");
                 <div class="clearfix"></div>
         </div><!-- container -->
 
-        <form class="form-style-1 placeholder-1" method="POST" action="checkout.php" >
+        <form class="form-style-1 placeholder-1" method="POST" action="thankyou.php" >
                         <div class="row">
                                 <div class="col-md-6"> <input class="mb-20" type="text" name ="name" placeholder="Name">  </div>
                                 <div class="col-md-6"> <input class="mb-20" type="text" name="email" placeholder="E-mail">  </div>

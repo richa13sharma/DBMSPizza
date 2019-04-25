@@ -10,12 +10,26 @@
     if (!$db)
         echo "Error Error \n";
 
-    $id = $_COOKIE['customerid'];
+        $customerid = $_COOKIE['customerid'];
+        $subtotal = $_COOKIE['subtotal'];
+        $insertorder = "INSERT INTO orders (customerid, subtotal, itemcount) 
+                        VALUES('$customerid', '$subtotal', (SELECT SUM(qty) FROM cart WHERE customerid='$customerid'))";
+        $res = pg_query($db, $insertorder);
+        $removecart = "DELETE FROM cart WHERE customerid = '$customerid'";
+        $res3 = pg_query($db, $removecart);     
 
-    $query= "DELETE FROM cart
-        WHERE customerid = $id";
+//     $id = $_COOKIE['customerid'];
+
+//     $query= "DELETE FROM cart
+//         WHERE customerid = $id";
+
+        
+
+        // header("Refresh:0; url=http://localhost/DBMSPizza/thankyou.php");
 
     ?>
+
+
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
