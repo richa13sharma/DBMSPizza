@@ -33,7 +33,7 @@
                 <ul class="main-menu font-mountainsre" id="main-menu">
                         <li><a href="indexcopy.php">HOME</a></li>
                         <li><a href="02_about_us.html">ABOUT US</a></li>
-                        <li><a href="03_menu.html">SERVICES</a></li>
+                        <!-- <li><a href="03_menu.html">SERVICES</a></li> -->
                         <li><a href="04_blog.html">NEWS</a></li>
                         <li><a href="05_contact.php">CONTACT</a></li>
                         <li><a href="cartcopy.php">CART</a></li>
@@ -54,7 +54,7 @@
 
                                 <h5><b>BEST IN TOWN</b></h5>
                                 <h1 class="mt-30 mb-15">Pizza & Pasta</h1>
-                                <h5><a href="#" class="btn-primaryc plr-25"><b>SEE TODAYS MENU</b></a></h5>
+                                <h5><a href="sec" class="btn-primaryc plr-25"><b>SEE TODAYS MENU</b></a></h5>
                         </div><!-- dplay-tbl-cell -->
                 </div><!-- dplay-tbl -->
         </div><!-- container -->
