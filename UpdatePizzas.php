@@ -10,15 +10,17 @@ if (!$db)
     echo "Error Error \n";
     // print_r($_POST['veg']);
     if(isset($_POST['name'])){
+        $id = pg_escape_string($db, $_POST['id']);
         $name = pg_escape_string($db, $_POST['name']);
         $cost = pg_escape_string($db, $_POST['cost']);
         $veg = pg_escape_string($db, $_POST['veg']);
         $desc = pg_escape_string($db, $_POST['message']);
         $category = pg_escape_string($db, $_POST['category']);
 
-        $insert = "INSERT INTO Product (productprice, productdescription, productname, productvegetarian, categoryid)
-                VALUES ('$cost', '$desc', '$name', '$veg', '$category')";
-        pg_query($db, $insert);
+        $update = "UPDATE Product
+                    SET productname = '$name', productprice = '$cost', productdescription = '$desc', productvegetarian = '$veg', categoryid = '$category'
+                    WHERE productid = '$id' ";
+        pg_query($db, $update);
 }
 
 
@@ -65,8 +67,10 @@ if (!$db)
 </header>
 <br><br><br><br><br>
 <body>
-    <form action = "NewPizzas.php" method = "POST" class = "form-style-1 placeholder-1">
+    <form action = "UpdatePizzas.php" method = "POST" class = "form-style-1 placeholder-1">
     <div class="row">
+                                <div class="col-md-12"> <input class="mb-20" type="text" name ="id" placeholder="ID of the Pizza">  </div>
+                                <br>
                                 <div class="col-md-12"> <input class="mb-20" type="text" name ="name" placeholder="Name of the Pizza">  </div>
                                 <br>
                                 <div class="col-md-12"> <input class="mb-20" type="number" name="cost" placeholder="Cost">  </div>
