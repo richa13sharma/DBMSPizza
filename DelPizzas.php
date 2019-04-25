@@ -52,7 +52,8 @@ if (!$db)
 
                 <ul class="main-menu font-mountainsre" id="main-menu">
                         <li><a href="NewPizzas.php">NEW PRODUCT</a></li>
-                        <li><a href="Deletepizzas.php">DELETE PRODUCT</a></li>
+                        <li><a href="DelPizzas.php">DELETE PRODUCT</a></li>
+                        <li><a href="UpdatePizzas.php">UPDATE PRODUCT</a></li>
 
 
                 <div class="clearfix"></div>
