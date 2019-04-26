@@ -141,9 +141,10 @@
                 $email = pg_escape_string($db, $_POST['email']);
                 $subject = pg_escape_string($db, $_POST['subject']);
                 $message = pg_escape_string($db, $_POST['message']);
+                $id = $_COOKIE['customerid'];
 
-                $insert = "INSERT INTO Messages (customername, customeremail, subjectofmessage, customermessage)
-                        VALUES ('$name', '$email', '$subject', '$message')";
+                $insert = "INSERT INTO Messages (customerid, customername, customeremail, subjectofmessage, customermessage)
+                        VALUES ('$id', '$name', '$email', '$subject', '$message')";
                 pg_query($db, $insert);
         }
 

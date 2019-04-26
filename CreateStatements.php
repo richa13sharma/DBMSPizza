@@ -53,6 +53,7 @@
     )";
     $tableMessage = "CREATE TABLE Messages (
         messageId SERIAL PRIMARY KEY,
+        customerid INT,
         customername VARCHAR(100),
         customeremail VARCHAR(100),
         subjectofmessage VARCHAR(100),
